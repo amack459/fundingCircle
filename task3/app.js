@@ -14,7 +14,7 @@ app.filter('searchFor', function(){
     searchString = searchString.toLowerCase();
 
     angular.forEach(arr, function(playerNames){
-
+      
       if(playerNames.toLowerCase().indexOf(searchString) !== -1){
         result.push(playerNames);
       }

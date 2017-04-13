@@ -20,7 +20,9 @@ h1{
   margin: 80px auto 20px;
   position:relative;
 }
-
+ ul{
+  list-style: none;
+ }
 
 /*MATCH INFO*/
 
