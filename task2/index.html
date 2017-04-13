@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="task2">
+<head>
+  <title>Task 2</title>
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  <link rel="stylesheet" type="text/css" href="style/stylesheet.css">
+   <link rel="stylesheet" type="text/css" href="style/stylesheet.less">
+
+
+  <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+  <script type="text/javascript" src=bower_components/less/dist/less.js""></script>
+  <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="js/controller/mainController.js"></script>
+
+</head>
+<body>
+
+
+
+  <main ng-controller="MainController as main">
+
+    <div class="container">
+      <h1> Latest Games</h1>
+      <div class="match row" >
+        <div class="col-md-6 col-md-offset-3" ng-repeat="match in main.matches" ng-init="main.winner(match)">
+          <h4> 
+            <img src="{{match.player1.img}}"><span ng-class="{'winner': match.winner === match.player1.name}">{{match.player1.name}}</span> {{match.player1.score}} - {{match.player2.score}} <span ng-class="{'winner': match.winner === match.player2.name}">{{match.player2.name}}</span> <img src="{{match.player2.img}}"></h4>
+            <br>
+
+            <p class="sets">
+             {{match.player1.set1}} - {{match.player2.set1}} |  {{match.player1.set2}} - {{match.player2.set2}} |  {{match.player1.set3}} - {{match.player2.set3}} |  {{match.player1.set4}} - {{match.player2.set4}} |  {{match.player1.set5}} - {{match.player2.set5}}
+
+             <button id="delete" class="pull-right" ng-click="main.deleteGame(match)"> <i class="fa fa-trash-o fa-lg" aria-hidden="true"></i></button>
+           </p>     
+
+         </div>
+       </div>
+      </div> 
+
+
+       <div class="container">
+        <h1>Add Games</h1>
+        
+        <form ng-submit="main.addGame(main.select1, main.select2)">
+          <div class="col-md-3 col-md-offset-2  .col-sm-3 .col-sm-offset-3 .col-xs-3 .col-xs-offset-3">
+            <select ng-model="main.select1" class="form-control input-lg">
+              <option value="" disabled selected>Look for player</option>
+              <option ng-repeat="name in main.playerNames" ng-value="name">{{name}}</option>      
+            </select>
+          </div> 
+          <div class="col-md-2 vs">
+            <p class="vs">VS</p>
+          </div>
+          <div class="col-md-3 .col-sm-3 . .col-sm-offset-1">
+            <select ng-model="main.select2" class="form-control input-lg">
+              <option value="" disabled selected>Look for player</option>
+              <option ng-repeat="name in main.playerNames" ng-value="name">{{name}}</option>
+            </select>  
+          </div>
+          <div class="col-md-2 col-md-offset-5 .col-sm-3 .col-sm-offset-3">
+            <input class="btn-lg btn-primary" type="submit" id="submit" value="Add Game"/>
+          </div>  
+        </form>
+
+      </div>
+      
+  </main>
+</body>
+
+
+</html>

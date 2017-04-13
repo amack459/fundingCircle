@@ -1,0 +1,59 @@
+body {
+  text-align: center;
+}
+
+h1{
+  margin: 20px auto;
+}
+
+
+/*MATCH INFO*/
+
+img{
+  width: 25px !important; 
+  height: 25px !important;
+  border-radius: 50%;
+  margin: 0 2px;
+}
+
+.winner{
+  width: 25px;
+  height: 25px;
+  opacity: .8;
+  border-radius: 2px;
+  background-color: green;
+}
+
+h4{
+  font-size: 20px;
+  margin-bottom: 0px;
+}
+
+p.sets{
+  margin-top: -16px; 
+  margin-bottom:22px; 
+  font-size: 16px;
+}
+
+/*DELETE BUTTON*/
+button{
+  background-color: transparent;
+  border: none;
+  margin-top: -30px;
+}
+
+i {
+  color: #337ab7;
+}
+
+/*VS TEXT*/
+p.vs{
+  margin-bottom: 0px;
+  margin-top: 8px;
+  font-size: 18px;
+}
+
+/*ADD GAME BUTTON*/
+.btn-lg.btn-primary{
+  margin-top: 20px; 
+}
