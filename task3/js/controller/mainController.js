@@ -81,9 +81,7 @@ function MainController($scope){
          "set5": 11,
          "score": 3
     }
-  }
-     
-  ];
+  }];
 
   this.players = players;
 

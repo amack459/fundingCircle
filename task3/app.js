@@ -23,5 +23,6 @@ app.filter('searchFor', function(){
 
     return result;
   };
-
 });
+
+

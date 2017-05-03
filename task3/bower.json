@@ -1,12 +1,12 @@
 {
-  "name": "task2",
+  "name": "task3",
+  "homepage": "https://github.com/amack459/fundingCircle",
   "authors": [
     "Acacia Mack <acacialmack@gmail.com>"
   ],
   "description": "",
   "main": "",
   "license": "MIT",
-  "homepage": "",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -16,12 +16,6 @@
   ],
   "dependencies": {
     "angular": "^1.6.4",
-    "bootstrap": "^3.3.7",
-    "less": "^2.7.2",
-    "grunt": "1.0.1"
-  },
-  "devDependencies": {
-    "grunt": "^1.0.1",
-    "install": "^1.0.4"
+    "bootstrap": "^3.3.7"
   }
 }
